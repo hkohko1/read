@@ -12,6 +12,9 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/reader/login', 'ReaderLogin');
 });
 
+Route::get('/book', function (Request $request) {
+    return "helllo";
+});
 
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
