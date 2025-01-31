@@ -15,7 +15,7 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::get('/book', function (Request $request) {
     $users = author::all();
-    response([$users]);
+    return response()->json([$users]);
 });
 
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
